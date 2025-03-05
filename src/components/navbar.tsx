@@ -45,7 +45,7 @@ export default function Navbar() {
         <div className="flex items-center gap-2">
           <ThemeToggle />
           <Button variant="outline" size="sm" className="hidden sm:flex hover:text-pink-500 transition-colors">
-            Log in
+            <Link href="/dashboard">Log in</Link>
           </Button>
           <Button
             size="sm"
