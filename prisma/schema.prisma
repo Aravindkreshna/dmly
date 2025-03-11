@@ -37,8 +37,8 @@ model Subscription {
 
 model Integrations {
   id          String       @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
-  name        Integrations @default(INSTAGRAM)
-  createdAt   DateTime      default(now())
+  name        INTEGRATIONS @default(INSTAGRAM)
+  createdAt   DateTime     @default(now())
   User        User?        @relation(fields: [userId], references: [id], onDelete: Cascade)
   userId      String?      @db.Uuid
   token       String       @unique
@@ -57,12 +57,12 @@ model Automation {
   dms       Dms[]
   User      User?      @relation(fields: [userId], references: [id], onDelete: Cascade)
   userId    String     @unique @db.Uuid
-  keywords  keywords[]
+  keywords  Keyword[]
 }
 
 model Dms {
   id           String      @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
-  Automation   Automation? @relation(fields: [automationId], refrence: [id])
+  Automation   Automation? @relation(fields: [automationId], references: [id])
   automationId String?     @db.Uuid
   createdAt    DateTime    @default(now())
   senderId     String?
@@ -71,13 +71,13 @@ model Dms {
 }
 
 model Post {
-  id         String      @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
-  postid     String
-  caption    String?
-  media      String
-  mediaType  MEDIATYPE   @default(IMAGE)
-  Automation Automation? @relation(fields: [automationId], references: [id], onDelete: Cascade)
-  automationId  String?  db.Uuid
+  id           String      @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  postid       String
+  caption      String?
+  media        String
+  mediaType    MEDIATYPE   @default(IMAGE)
+  Automation   Automation? @relation(fields: [automationId], references: [id], onDelete: Cascade)
+  automationId String?     @db.Uuid
 }
 
 model Listener {
@@ -92,10 +92,10 @@ model Listener {
 }
 
 model Trigger {
-  id         String      @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
-  type       String
-  Automation Automation? @relation(fields: [automationId], references: [id], onDelete: Cascade)
-  automationId  String?  db.Uuid
+  id            String      @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  type          String
+  Automation    Automation? @relation(fields: [automationId], references: [id], onDelete: Cascade)
+  automationId  String?     @db.Uuid
 }
 
 model Keyword {
@@ -103,9 +103,9 @@ model Keyword {
   word         String
   Automation   Automation? @relation(fields: [automationId], references: [id], onDelete: Cascade)
   automationId String?     @db.Uuid
-}
 
-@@unique([automationId, word]) // this constraints ensure user cant use the same Keyword on multiple automations
+  @@unique([automationId, word]) // this constraints ensure user cant use the same Keyword on multiple automations
+}
 
 enum SUBSCRIPTION_PLAN {
   PRO
