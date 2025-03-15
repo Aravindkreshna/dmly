@@ -1,8 +1,4 @@
-import { HomeIcon } from 'lucide-react'
-import { Workflow } from 'lucide-react';
-import { Blocks } from 'lucide-react';
-import { Settings } from 'lucide-react';
-
+import { HomeIcon, Workflow, Blocks, Settings } from 'lucide-react'
 import { v4 as uuid } from 'uuid'
 
 type FieldProps = {
@@ -12,7 +8,7 @@ type FieldProps = {
 
 type SideBarProps = {
     icon: React.ReactNode
-} & FieldProps
+}   & FieldProps
 
 export const SIDEBAR_MENU: SideBarProps[] = [
     {
