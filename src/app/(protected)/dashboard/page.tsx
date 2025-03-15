@@ -1,14 +1,17 @@
 import Sidebar from '@/components/global/sidebar'
 import React from 'react'
 
-type Props = {}
+type Props = {
+    slug: string;
+    params: { slug: string };
+}
 
-const Page = async (props: Props) => {
+const Page = async ({ params }: Props) => {
     //WIP: Server Action Inboard the user
     //WIP: 200 || 201
 
     return <div>
-        <Sidebar />
+        <Sidebar slug={params.slug} />
     </div>
 }
 
