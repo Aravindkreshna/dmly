@@ -23,6 +23,12 @@ const Sidebar = ({ slug }: Props) => {
                         page={page}
                         slug={slug} />
                     </div>
+                    <div className="px-16">
+                        <Separator
+                                orientation="horizontal"
+                                className="bg-[5C5C5F]"
+                        />
+                    </div>
                 </div>
         </div>
         
