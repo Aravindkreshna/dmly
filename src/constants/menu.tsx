@@ -14,22 +14,22 @@ type SideBarProps = {
 
 export const SIDEBAR_MENU: SideBarProps[] = [
     {
-        id: uuid(),
+        id: "0",
         label: 'home',
         icon: <HomeIcon />
     },
     {
-        id: uuid(),
+        id: "1",
         label: 'automations',
         icon: <Workflow />
     },
     {
-        id: uuid(),
+        id: "2",
         label: 'integrations',
         icon: <Blocks />
     },
     {
-        id: uuid(),
+        id: "3",
         label: 'settings',
         icon: <Settings />
     }

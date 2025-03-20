@@ -24,6 +24,7 @@ const Sidebar = ({ slug }: Props) => {
                         page={page}
                         slug={slug} />
                     </div>
+                    <p>udfajdddddaslkl;s</p>
                     <div className="px-16">
                         <Separator
                                 orientation="horizontal"
