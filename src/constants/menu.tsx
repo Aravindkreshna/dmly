@@ -1,5 +1,7 @@
-import { HomeIcon, Workflow, Blocks, Settings } from 'lucide-react'
+import { Workflow, Blocks, Settings } from 'lucide-react'
 import { v4 as uuid } from 'uuid'
+import { HomeIcon } from '@/icons/homeIcon'
+
 
 type FieldProps = {
     label: string
