@@ -3,6 +3,7 @@ import { usePaths } from '@/hooks/user-nav'
 import { LogoSmall } from '@/svgs/logo-small'
 import React from 'react'
 import Items from './items'
+import { Separator } from '@/components/ui/separator'
 
 type Props = {
     slug: string
@@ -26,7 +27,7 @@ const Sidebar = ({ slug }: Props) => {
                     <div className="px-16">
                         <Separator
                                 orientation="horizontal"
-                                className="bg-[5C5C5F]"
+                                className="bg-zinc-700"
                         />
                     </div>
                 </div>
