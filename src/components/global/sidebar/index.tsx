@@ -4,6 +4,8 @@ import { LogoSmall } from '@/svgs/logo-small'
 import React from 'react'
 import Items from './items'
 import { Separator } from '@/components/ui/separator'
+import { HelpCircle } from 'lucide-react'
+
 
 type Props = {
     slug: string
@@ -30,6 +32,16 @@ const Sidebar = ({ slug }: Props) => {
                                 orientation="horizontal"
                                 className="bg-zinc-700"
                         />
+                    </div>
+                    <div className="px-3 flex flex-col gap-y-5">
+                        <div className="flex gap-x-2">
+                            <ClerAuthState />
+                            <p className="text-[#989CA0]">Profile</p>
+                        </div>
+                        <div className="'flex gap-x-3">
+                            <HelpCircle className='text-[#989ca0]'/>
+                            <p className="text-[#989ca0]">Help</p>
+                        </div>
                     </div>
                 </div>
         </div>
