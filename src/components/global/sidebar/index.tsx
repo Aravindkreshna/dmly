@@ -5,6 +5,10 @@ import React from 'react'
 import Items from './items'
 import { Separator } from '@/components/ui/separator'
 import { HelpCircle } from 'lucide-react'
+import ClerAuthState from '@/components/global/clerk-auth-state'
+import { HelpIcon } from '@/icons/helpIcon'
+
+
 
 
 type Props = {
@@ -26,7 +30,6 @@ const Sidebar = ({ slug }: Props) => {
                         page={page}
                         slug={slug} />
                     </div>
-                    <p>udfajdddddaslkl;s</p>
                     <div className="px-16">
                         <Separator
                                 orientation="horizontal"
@@ -38,8 +41,8 @@ const Sidebar = ({ slug }: Props) => {
                             <ClerAuthState />
                             <p className="text-[#989CA0]">Profile</p>
                         </div>
-                        <div className="'flex gap-x-3">
-                            <HelpCircle className='text-[#989ca0]'/>
+                        <div className="flex gap-x-3">
+                            <HelpIcon />
                             <p className="text-[#989ca0]">Help</p>
                         </div>
                     </div>

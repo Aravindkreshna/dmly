@@ -1,4 +1,4 @@
-export const HomeIcon = () => {
+export const HelpIcon = () => {
   return (
     <svg
       width="24"
