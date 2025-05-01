@@ -12,7 +12,7 @@ const Navbar = ({ slug }: Props) => {
     const currentPage = PAGE_BREAD_CRUMBS.includes(page) || page == slug
 
 
-    return currentPage && <div className="flex flex-col">fff fgdgg</div>
+    return currentPage && <div className="flex flex-col">helloooooo</div>
 }
 
 export default Navbar
